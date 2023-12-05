@@ -12,7 +12,7 @@
 ## Notes: 
 01. If the device is bootlooping, you should perform a factory reset.
 
-02. Stock recovery will broke after installing this ramdisk patch, so use the TWRP kindly. <hr>
+02. <s>Stock recovery will broke after installing this ramdisk patch, so use the TWRP kindly.</s> [Install Patched Stock recovery from here..!](https://github.com/ravindu644/android_kernel_beyondx/releases/tag/Recovery) <hr>
 
 ## 🧑‍💻 For Developers - > How to build ?
 01. Put the necessary variables in build_kernel.sh
