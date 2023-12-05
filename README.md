@@ -12,7 +12,8 @@
 ## Notes: 
 01. If the device is bootlooping, you should perform a factory reset.
 
-02. Stock recovery will broke after installing this ramdisk patch, so use the TWRP kindly. <br>
+02. Stock recovery will broke after installing this ramdisk patch, so use the TWRP kindly. <hr>
+
 ## 🧑‍💻 For Developers - > How to build ?
 01. Put the necessary variables in build_kernel.sh
 02. Type ``` ./build_kernel.sh ```.
@@ -24,4 +25,7 @@
 08. Open split_image and replace "cmdline, board, os patch level things, and place your compiled kernel"
 09. Repack and flash the boot.img + dt.img + dtbo.img using odin.
 10. Done.
+
+## Credits and Thanks : [@ivanmeler](https://github.com/ivanmeler), [Kartik Gupta](https://github.com/ghazzor),[ @S1m3x](https://t.me/S1m3x), [Chaitanya Yeranagula](https://github.com/LMAO-armv8)
+### Join My Updates Channel : [@SamsungTweaks](https://t.me/SamsungTweaks)
 
