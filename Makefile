@@ -380,7 +380,6 @@ AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
 LDGOLD		= $(CROSS_COMPILE)ld.gold
 #CC		= $(CROSS_COMPILE)gcc
-<<<<<<< HEAD
 # CC              = $(srctree)/toolchain/clang/host/linux-x86/clang-4639204-cfp-jopp/bin/clang
 
 # cc = /home/grahame/G970f-UF/toolchain/prebuilts_clang_host_linux-x86_clang-r383902-jopp-11/bin/clang

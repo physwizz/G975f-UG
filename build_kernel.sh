@@ -16,7 +16,7 @@ clear
 export ARCH=arm64
 export PLATFORM_VERSION=12
 export ANDROID_MAJOR_VERSION=s
-export exynos_defconfig=exynos9820-beyondxks_defconfig
+export exynos_defconfig=physwizz_defconfig
 export mkdtimg=/home/grahame/Downloads/mkdtimg
 work_dir=$(pwd)
 dt_tool=$work_dir/binaries
@@ -31,7 +31,7 @@ dtb_img() {
 
 clean_build() {
     make clean && make mrproper
-    make ARCH=arm64 physwizz_defconfig
+    make ARCH=arm64 $exynos_defconfig
     make menuconfig
     make -j16
     dtb_img
@@ -40,7 +40,7 @@ clean_build() {
 }
 
 dirty_build() {
-    make ARCH=arm64 physwizz_defconfig
+    make ARCH=arm64 $exynos_defconfig
     make menuconfig
     make -j16
     dtb_img
@@ -49,7 +49,7 @@ dirty_build() {
 }
 
 scratch() {
-    make ARCH=arm64 physwizz_defconfig
+    make ARCH=arm64 $exynos_defconfig
     make menuconfig
 }
 
@@ -58,7 +58,7 @@ dirty() {
 }
 
 dtb () {
-	make ARCH=arm64 physwizz_defconfig
+	make ARCH=arm64 $exynos_defconfig
 	make dtbs
 	dtb_img
 	}
