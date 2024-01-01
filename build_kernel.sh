@@ -11,13 +11,13 @@
 
 
 clear
-export clang_exynos=/home/ravindu/Desktop/toolchain/Exynos9820/clang/host/linux-x86/clang-4639204-cfp-jopp/bin
-export gcc_exynos=/home/ravindu/Desktop/toolchain/Exynos9820/gcc-cfp/gcc-cfp-jopp-only/aarch64-linux-android-4.9/bin
+#export clang_exynos=/home/ravindu/Desktop/toolchain/Exynos9820/clang/host/linux-x86/clang-4639204-cfp-jopp/bin
+#export gcc_exynos=/home/ravindu/Desktop/toolchain/Exynos9820/gcc-cfp/gcc-cfp-jopp-only/aarch64-linux-android-4.9/bin
 export ARCH=arm64
 export PLATFORM_VERSION=12
 export ANDROID_MAJOR_VERSION=s
 export exynos_defconfig=exynos9820-beyondxks_defconfig
-export mkdtimg=/home/ravindu/Downloads/mkdtimg
+export mkdtimg=/home/grahame/Downloads/mkdtimg
 work_dir=$(pwd)
 dt_tool=$work_dir/binaries
 rm -rf out && mkdir out
@@ -31,7 +31,7 @@ dtb_img() {
 
 clean_build() {
     make clean && make mrproper
-    make ARCH=arm64 $exynos_defconfig
+    make ARCH=arm64 physwizz_defconfig
     make menuconfig
     make -j16
     dtb_img
@@ -40,7 +40,7 @@ clean_build() {
 }
 
 dirty_build() {
-    make ARCH=arm64 $exynos_defconfig
+    make ARCH=arm64 physwizz_defconfig
     make menuconfig
     make -j16
     dtb_img
@@ -49,7 +49,7 @@ dirty_build() {
 }
 
 scratch() {
-    make ARCH=arm64 $exynos_defconfig
+    make ARCH=arm64 physwizz_defconfig
     make menuconfig
 }
 
@@ -58,7 +58,7 @@ dirty() {
 }
 
 dtb () {
-	make ARCH=arm64 $exynos_defconfig
+	make ARCH=arm64 physwizz_defconfig
 	make dtbs
 	dtb_img
 	}
